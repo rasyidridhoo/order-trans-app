@@ -140,7 +140,7 @@ if ($conn) {
   <table class="table table-striped table-bordered">
     <thead>
       <tr>
-        <th>No</th><th>Kode Transaksi</th><th>Tanggal</th><th>Aksi</th>
+        <th>No</th><th>Kode Transaksi</th><th>No Transaksi</th><th>Tanggal</th><th>Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -148,6 +148,7 @@ if ($conn) {
       <tr>
         <td><?= $no++ ?></td>
         <td><?= htmlspecialchars($row['kode_transaksi']) ?></td>
+        <td><?= $row['id'] ?></td>
         <td><?= date('d-m-Y H:i', strtotime($row['tanggal'])) ?></td>
         <td>
           <button class="btn btn-sm btn-info" onclick="openDetail(<?= $row['id'] ?>)">Detail</button>

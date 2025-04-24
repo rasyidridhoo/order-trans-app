@@ -3,7 +3,8 @@
   <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 </div>
 <div class="modal-body">
-  <p><strong>Kode:</strong> <?= $transaksi['kode_transaksi'] ?></p>
+  <p><strong>Kode Transaksi:</strong> <?= $transaksi['kode_transaksi'] ?></p>
+  <p><strong>No Transaksi:</strong> <?= $transaksi['id'] ?></p>
   <p><strong>Tanggal:</strong> <?= $transaksi['tanggal'] ?></p>
   <hr>
   <table class="table table-bordered">

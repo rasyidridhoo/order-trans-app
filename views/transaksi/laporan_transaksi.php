@@ -21,6 +21,7 @@ $where_sql = !empty($where) ? 'WHERE ' . implode(' AND ', $where) : '';
 
 $sql = "
 SELECT 
+mt.id,
     mt.kode_transaksi,
     mt.tanggal,
     mp.produk,
@@ -68,9 +69,10 @@ $totalSemua = 0;
     <tr>
       <th>No.</th>
       <th>Kode Transaksi</th>
+      <th>No Transaksi</th>
       <th>Tanggal</th>
       <th>Produk</th>
-      <th>Jumlah</th>
+      <th>Quantity</th>
       <th>Harga</th>
       <th>Total</th>
     </tr>
@@ -82,6 +84,7 @@ $totalSemua = 0;
     <tr>
       <td><?= $no++ ?></td>
       <td><?= htmlspecialchars($row['kode_transaksi']) ?></td>
+      <td><?= $row['id'] ?></td>
       <td><?= date('d-m-Y H:i', strtotime($row['tanggal'])) ?></td>
       <td><?= htmlspecialchars($row['produk']) ?></td>
       <td><?= $row['quantity'] ?></td>
@@ -92,7 +95,7 @@ $totalSemua = 0;
   </tbody>
   <tfoot>
     <tr>
-      <td colspan="6"><strong>Total</strong></td>
+      <td colspan="7"><strong>Total</strong></td>
       <td><strong>Rp <?= number_format($totalSemua, 0, ',', '.') ?></strong></td>
     </tr>
   </tfoot>
