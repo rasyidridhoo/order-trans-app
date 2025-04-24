@@ -23,9 +23,7 @@ Aplikasi manajemen transaksi berbasis web, dibuat dengan PHP dan MySQL.
 
 ### 1. Clone Repository
 
-git clone https://github.com/username/toko_appnew.git
-
-( Ganti username dengan username GitHub Anda)
+git clone https://github.com/rasyidridhoo/order-trans-app.git
 
 
 ### 2. Pindahkan ke htdocs
